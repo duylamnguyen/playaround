@@ -146,3 +146,32 @@ hinhtron.function <- function(dientich){
     p <- 2 * pi * r
     print(paste('Ban kinh:', round(r,2), ', Chu vi:', round(p, 2)))
 }
+  
+giaipt.function <- function(a, b){
+    if ((a == 0) & (b != 0)){
+        print('PT vo nghiem')
+    } else if ((a == 0) & (b != 0)){
+        print('PT vo so nghiem')
+    } else{
+        x <- -b / a
+        print(paste('Phuong trinh co nghiem x:', x))
+    }
+}
+  
+giaiptbac2.function <- function(a, b, c){
+    if (a == 0){
+        x <- -c / b
+    } else{
+        delta <- b*b - 4*a*c
+        if (delta < 0){
+            print('PT vo nghiem')
+        } else if (delta == 0){
+            x <- -b / (2*a)
+            print(paste('PT co nghiem kep x1 = x2 = x0:', x))
+        } else{
+            x1 <- (-b + sqrt(delta)) / (2*a)
+            x2 <- (-b - sqrt(delta)) / (2*a)
+            print(paste('PT co 2 nghiem phan biet: x1 =', x1, ', x2 =', x2))
+        }
+    }
+}
